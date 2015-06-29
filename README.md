@@ -15,7 +15,13 @@ $ npm install --save chinese-simple-tradition-translator
 ```js
 var chineseSimpleTraditionTranslator = require('chinese-simple-tradition-translator');
 
-chineseSimpleTraditionTranslator('Rainbow');
+自动检测字体并翻译
+var tranditional = chineseSimpleTraditionTranslator.translate('三國演義');
+var simple= chineseSimpleTraditionTranslator.translate('三国演义');
+
+读取文件并直接把翻译文字保存到目标文件，并设置使用s2t（简体到繁体）
+chineseSimpleTraditionTranslator.translateFile("input.file", "output.file", "s2t", function(err) {
+});
 ```
 
 
